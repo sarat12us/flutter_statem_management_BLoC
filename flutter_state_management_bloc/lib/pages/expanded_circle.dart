@@ -22,7 +22,7 @@ class ExpandedCircle extends StatelessWidget {
                   builder: (BuildContext context, AsyncSnapshot<double> snapshot){
                       return Transform.scale(
                           scale: snapshot.data,
-                          child: FloatingActionButton(onPressed: () {}),
+                          child: FloatingActionButton(onPressed: () {}, child: Text('BLoC'),),
                     );
                   },
                 ),

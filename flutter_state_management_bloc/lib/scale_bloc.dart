@@ -17,10 +17,11 @@ class ScaleBloc {
   }
 
   void _mapEvenetToState(ScaleEvent event) {
-    if (event is ExpandEevent)
-      _scale = _scale + 1.0;
-    else
-      _scale = _scale - 1.0;
+    if (event is ExpandEevent) {
+      if (_scale != 7.0) _scale = _scale + 1.0;
+    } else {
+      if (_scale != 1.0) _scale = _scale - 1.0;
+    }
 
     _inScale.add(_scale);
   }
